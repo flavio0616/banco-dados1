@@ -1,0 +1,12 @@
+CREATE TABLE aluno (
+    id_usuario SERIAL PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    endereço VARCHAR(50) NOT NULL UNIQUE
+);
+
+INSERT INTO aluno(nome, email, endereço) VALUES ('Miguel', 'miguel@email.com', 'rua-leste');
+INSERT INTO aluno(nome, email, endereço) VALUES ('flavio', 'flavio@email.com', 'rua-norte');
+INSERT INTO aluno(nome, email, endereço) VALUES ('Davi', 'davi@email.com', 'rua-sul');
+
+SELECT * FROM aluno
